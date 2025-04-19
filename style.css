@@ -1,0 +1,354 @@
+:root {
+    --primary-color: #2575fc;
+    --secondary-color: #6a11cb;
+    --text-color: #333;
+    --bg-color: #f8f9fa;
+    --dark-bg: #222;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  header {
+    background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+    color: white;
+    padding: 3rem 1rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    background-color: var(--dark-bg);
+    padding: 1rem 0;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: #ffd700;
+  }
+  
+  .hero {
+    background: url('images/bookstore.jpg') no-repeat center center/cover;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  }
+  
+  .hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.8rem 1.6rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .hero button:hover {
+    background-color: #1e63da;
+    transform: scale(1.05);
+  }
+  
+  .about-us,
+  .genres {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+    text-align: center;
+  }
+  
+  .about-us h2,
+  .genres h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+  }
+  
+  .about-us p {
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  .genres ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .genres li {
+    background-color: white;
+    padding: 0.75rem 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1.1rem;
+    transition: transform 0.2s;
+  }
+  
+  .genres li:hover {
+    transform: translateY(-3px);
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2.5rem auto;
+    max-width: 1000px;
+    padding: 1rem;
+  }
+  
+  .tabs a {
+    display: inline-block;
+  }
+  
+  .tabs img {
+    width: 160px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .tabs img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  }
+  
+  footer {
+    background-color: var(--dark-bg);
+    color: white;
+    text-align: center;
+    padding: 1.2rem;
+    margin-top: 4rem;
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 0.95rem;
+  }
+  
+  @media (max-width: 600px) {
+    .hero h2 {
+      font-size: 1.8rem;
+    }
+  
+    .hero p,
+    .hero button {
+      font-size: 1rem;
+    }
+  
+    nav {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    .genres ul {
+      flex-direction: column;
+    }
+  
+    .tabs img {
+      width: 130px;
+      height: 190px;
+    }
+    .book-info-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem 1rem;
+  background-color: #f1f4f9;
+  min-height: 60vh;
+}
+
+.book-info-card {
+  background: white;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  width: 100%;
+  line-height: 1.8;
+}
+
+.book-info-card h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.book-info-card p {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: #444;
+}
+
+.book-info-card .description {
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .book-info-card {
+    padding: 1.5rem;
+  }
+
+  .book-info-card h2 {
+    font-size: 1.6rem;
+  }
+
+  .book-info-card p {
+    font-size: 1rem;
+  }
+}
+.book-details {
+    padding: 3rem 1rem;
+    max-width: 1100px;
+    margin: auto;
+  }
+  
+  .book-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+  }
+  
+  .book-cover img {
+    width: 260px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .book-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .book-content h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+  }
+  
+  .book-content .author,
+  .book-content .genre,
+  .book-content .published {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .rating span {
+    font-size: 1.2rem;
+    color: #fbc02d;
+  }
+  
+  .price {
+    font-size: 1.5rem;
+    color: #2575fc;
+    font-weight: bold;
+  }
+  
+  .buy-btn {
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .buy-btn:hover {
+    background-color: #1e63da;
+  }
+  
+  .related-books {
+    margin-top: 4rem;
+  }
+  
+  .related-books h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    text-align: center;
+  }
+  
+  .related-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  
+  .related-item {
+    text-align: center;
+    max-width: 150px;
+  }
+  
+  .related-item img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .related-item img:hover {
+    transform: scale(1.05);
+  }
+  
+  .related-item p {
+    margin-top: 0.5rem;
+    font-weight: 500;
+  }
+  
+}
