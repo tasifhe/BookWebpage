@@ -3,44 +3,313 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Book Shop</title>
+  <title>Our Book Collection | Book Shop</title>
   <link rel="stylesheet" href="style.css">
-
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <header>
-    <h1>Welcome to the Book Shop</h1>
+    <h1>Our Book Collection</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="collection.html" class="active">Collection</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <main>
+    <!-- Collection Banner -->
+    <section class="collection-banner">
+      <h2>Explore Our Curated Collection</h2>
+      <p>Discover books that will transport you to new worlds, expand your knowledge, and touch your heart.</p>
+      
+      <!-- Search and Filter Bar -->
+      <div class="search-filter">
+        <div class="search-box">
+          <input type="text" placeholder="Search books, authors, or genres...">
+          <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="filter-options">
+          <select name="sort">
+            <option value="popular">Most Popular</option>
+            <option value="newest">Newest First</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+          </select>
+        </div>
+      </div>
+    </section>
 
-  <section class="genres">
-    <h2>Genres</h2>
-    <ul>
-      <li>Fiction</li>
-      <li>Non-Fiction</li>
-      <li>Science Fiction</li>
-      <li>Fantasy</li>
-      <li>Biographies</li>
-      <li>Children's Books</li>
-      <li>Academic</li>
-      <li>Self-Help</li>
-      <li>Cookbooks</li>
-    </ul>
-  </section>
+    <!-- Genres Quick Navigation -->
+    <section class="genres">
+      <h2>Browse by Genre</h2>
+      <ul>
+        <li><a href="#fiction"><i class="fas fa-book"></i> Fiction</a></li>
+        <li><a href="#non-fiction"><i class="fas fa-landmark"></i> Non-Fiction</a></li>
+        <li><a href="#sci-fi"><i class="fas fa-rocket"></i> Science Fiction</a></li>
+        <li><a href="#fantasy"><i class="fas fa-dragon"></i> Fantasy</a></li>
+        <li><a href="#mystery"><i class="fas fa-search"></i> Mystery</a></li>
+        <li><a href="#biographies"><i class="fas fa-user"></i> Biographies</a></li>
+        <li><a href="#children"><i class="fas fa-child"></i> Children's Books</a></li>
+        <li><a href="#academic"><i class="fas fa-graduation-cap"></i> Academic</a></li>
+        <li><a href="#art"><i class="fas fa-palette"></i> Art</a></li>
+        <li><a href="#cookbooks"><i class="fas fa-utensils"></i> Cookbooks</a></li>
+      </ul>
+    </section>
 
-  <section class="tabs">
-    <a href="book1.html"><img src="images/TGA_CoverPage.png" alt="Book 1"></a>
-    <a href="book2.html"><img src="images/book2.jpg" alt="Book 2"></a>
-    <a href="book3.html"><img src="images/book3.jpg" alt="Book 3"></a>
-  </section>
+    <!-- Featured Books Carousel -->
+    <section class="featured-books">
+      <h2>Featured Books</h2>
+      <div class="book-carousel">
+        <div class="book-item">
+          <div class="book-badge">New</div>
+          <img src="images/TGA_CoverPage.png" alt="The Great Adventure" height="300px" width="300px">
+          <h3>The Great Adventure</h3>
+          <p class="author">by John Doe</p>
+          <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+          <p class="price">৳450</p>
+          <a href="book1.html" class="view-details">View Details</a>
+        </div>
+        <div class="book-item">
+          <img src="images/book2.jpg" alt="Journey Beyond" height="300px" width="300px">
+          <h3>Journey Beyond</h3>
+          <p class="author">by Sarah Smith</p>
+          <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+          <p class="price">৳380</p>
+          <a href="book2.html" class="view-details">View Details</a>
+        </div>
+        <div class="book-item">
+          <div class="book-badge">Bestseller</div>
+          <img src="images/book3.png" alt="Echoes of the Wild" height="300px" width="300px">
+          <h3>Echoes of the Wild</h3>
+          <p class="author">by Michael Johnson</p>
+          <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="price">৳500</p>
+          <a href="book3.html" class="view-details">View Details</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fiction Books -->
+    <section id="fiction" class="book-category">
+      <div class="category-header">
+        <h2>Fiction</h2>
+        <a href="#" class="view-all">View All Fiction <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="book-grid">
+        <div class="book-card">
+          <a href="book1.html">
+            <img src="images/TGA_CoverPage.png" alt="The Great Adventure">
+            <div class="book-info">
+              <h3>The Great Adventure</h3>
+              <p class="author">John Doe</p>
+              <p class="price">৳450</p>
+            </div>
+          </a>
+          <button class="quick-view">Quick View</button>
+        </div>
+        <div class="book-card">
+          <a href="#">
+            <img src="images/book2.jpg" alt="The Silent Echo">
+            <div class="book-info">
+              <h3>The Silent Echo</h3>
+              <p class="author">Emma Roberts</p>
+              <p class="price">৳400</p>
+            </div>
+          </a>
+          <button class="quick-view">Quick View</button>
+        </div>
+        <div class="book-card">
+          <a href="#">
+            <img src="images/book4.jpeg" alt="Midnight Tales">
+            <div class="book-info">
+              <h3>Midnight Tales</h3>
+              <p class="author">Robert Wilson</p>
+              <p class="price">৳350</p>
+            </div>
+          </a>
+          <button class="quick-view">Quick View</button>
+        </div>
+        <div class="book-card">
+          <a href="#">
+            <img src="images/book3.png" alt="The Forgotten Path">
+            <div class="book-info">
+              <h3>The Forgotten Path</h3>
+              <p class="author">Lisa Chen</p>
+              <p class="price">৳420</p>
+            </div>
+          </a>
+          <button class="quick-view">Quick View</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Non-Fiction -->
+    <section id="non-fiction" class="book-category">
+      <div class="category-header">
+        <h2>Non-Fiction</h2>
+        <a href="#" class="view-all">View All Non-Fiction <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="book-grid">
+        <div class="book-card">
+          <a href="book2.html">
+            <img src="images/book2.jpg" alt="The Art of Thinking">
+            <div class="book-info">
+              <h3>The Art of Thinking</h3>
+              <p class="author">David Brooks</p>
+              <p class="price">৳520</p>
+            </div>
+          </a>
+          <button class="quick-view">Quick View</button>
+        </div>
+        <div class="book-card">
+          <a href="#">
+            <img src="images/book5.png" alt="Modern History">
+            <div class="book-info">
+              <h3>Modern History</h3>
+              <p class="author">Prof. James Williams</p>
+              <p class="price">৳600</p>
+            </div>
+          </a>
+          <button class="quick-view">Quick View</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Science Fiction -->
+    <section id="sci-fi" class="book-category">
+      <div class="category-header">
+        <h2>Science Fiction</h2>
+        <a href="#" class="view-all">View All Sci-Fi <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="book-grid">
+        <div class="book-card">
+          <a href="book3.html">
+            <img src="images/book3.png" alt="Stellar Odyssey">
+            <div class="book-info">
+              <h3>Stellar Odyssey</h3>
+              <p class="author">Alex Morgan</p>
+              <p class="price">৳480</p>
+            </div>
+          </a>
+          <button class="quick-view">Quick View</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fantasy -->
+    <section id="fantasy" class="book-category">
+      <div class="category-header">
+        <h2>Fantasy</h2>
+        <a href="#" class="view-all">View All Fantasy <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="book-grid">
+        <div class="book-card">
+          <a href="book4.html">
+            <img src="images/book4.jpeg" alt="Realm of Shadows">
+            <div class="book-info">
+              <h3>Realm of Shadows</h3>
+              <p class="author">Emily Frost</p>
+              <p class="price">৳510</p>
+            </div>
+          </a>
+          <button class="quick-view">Quick View</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mystery Section -->
+    <section id="mystery" class="book-category">
+      <div class="category-header">
+        <h2>Mystery</h2>
+        <a href="#" class="view-all">View All Mystery <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="book-grid">
+        <div class="book-card">
+          <a href="#">
+            <img src="images/book2.jpg" alt="The Silent Whisper">
+            <div class="book-info">
+              <h3>The Silent Whisper</h3>
+              <p class="author">Thomas Harris</p>
+              <p class="price">৳470</p>
+            </div>
+          </a>
+          <button class="quick-view">Quick View</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Academic -->
+    <section id="academic" class="book-category">
+      <div class="category-header">
+        <h2>Academic</h2>
+        <a href="#" class="view-all">View All Academic <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="book-grid">
+        <div class="book-card">
+          <a href="book5.html">
+            <img src="images/book5.png" alt="Advanced Physics">
+            <div class="book-info">
+              <h3>Advanced Physics</h3>
+              <p class="author">Dr. Richard Feynman</p>
+              <p class="price">৳750</p>
+            </div>
+          </a>
+          <button class="quick-view">Quick View</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Subscription -->
+    <section class="newsletter">
+      <h2>Stay Updated</h2>
+      <p>Subscribe to our newsletter for new arrivals, special offers, and reading recommendations.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Book Shop. All rights reserved to SMUCT.</p>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Book Shop</h3>
+        <p>Your destination for quality books and literary treasures.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="collection.html">Collection</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Connect With Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Book Shop. All rights reserved to SMUCT.</p>
+    </div>
   </footer>
+
+  <!-- Simple JavaScript for Interaction -->
+  <script>
+    // Quick view button functionality
+    document.querySelectorAll('.quick-view').forEach(button => {
+      button.addEventListener('click', function() {
+        alert('Quick view functionality would display a modal with book details here.');
+      });
+    });
+  </script>
 </body>
 </html>
