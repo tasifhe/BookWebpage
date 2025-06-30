@@ -3,34 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>About Us | Book Shop</title>
+    <meta name="description" content="Learn about our mission, values, and passion for bringing quality books to readers everywhere.">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1>About Us</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+        <div class="header-content">
+            <h1><a href="index.html">📚 Book Shop</a></h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="collection.html">Collection</a>
+                <a href="about.html" class="active">About Us</a>
+                <a href="contact.html">Contact</a>
+                <div class="header-actions">
+                    <button class="theme-toggle" aria-label="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <div class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </div>
+                </div>
+            </nav>
+        </div>
     </header>
+
     <main>
-        <section>
-            <h2>Who We Are</h2>
-            <p>Welcome to our website! We are passionate about books and aim to provide the best resources for book enthusiasts.</p>
+        <section class="about-hero">
+            <h2>About Our Book Shop</h2>
+            <p>Passionate about books, dedicated to readers</p>
         </section>
-        <section>
-            <h2>Our Mission</h2>
-            <p>Our mission is to connect readers with the books they love and foster a community of book lovers.</p>
+
+        <section class="about-story">
+            <div class="story-content">
+                <h3>Our Story</h3>
+                <p>Founded in 2020, our Book Shop began as a small dream to connect readers with extraordinary books. What started as a passion project has grown into a thriving community of book lovers who share our commitment to the written word.</p>
+                
+                <p>We believe that books have the power to transform lives, expand minds, and bring people together. Our carefully curated collection spans genres from timeless classics to contemporary bestsellers, ensuring that every reader finds their perfect match.</p>
+                
+                <div class="mission-vision">
+                    <div class="mission">
+                        <h4><i class="fas fa-bullseye"></i> Our Mission</h4>
+                        <p>To foster a love of reading by providing access to quality books and creating a welcoming space for literary exploration and discovery.</p>
+                    </div>
+                    <div class="vision">
+                        <h4><i class="fas fa-eye"></i> Our Vision</h4>
+                        <p>To be the premier destination for book enthusiasts, building a community where stories connect us and knowledge empowers us all.</p>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section>
-            <h2>Contact Us</h2>
-            <p>If you have any questions or suggestions, feel free to reach out to us through our contact page.</p>
+
+        <section class="team-section">
+            <h3>Meet Our Team</h3>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-photo">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h4>Sarah Johnson</h4>
+                    <p class="role">Founder & CEO</p>
+                    <p>A lifelong bibliophile with over 15 years in the publishing industry. Sarah's vision drives our commitment to quality and customer service.</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h4>Michael Chen</h4>
+                    <p class="role">Curator & Buyer</p>
+                    <p>With a master's in Literature, Michael ensures our collection represents diverse voices and exceptional storytelling across all genres.</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h4>Emily Rodriguez</h4>
+                    <p class="role">Customer Experience Manager</p>
+                    <p>Emily's passion for helping readers find their next great book makes every customer interaction a delightful experience.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="values-section">
+            <h3>Our Values</h3>
+            <div class="values-grid">
+                <div class="value-card">
+                    <i class="fas fa-heart"></i>
+                    <h4>Passion for Books</h4>
+                    <p>We live and breathe literature, bringing genuine enthusiasm to every recommendation and service.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-users"></i>
+                    <h4>Community First</h4>
+                    <p>Building connections between readers and fostering a supportive literary community is at our core.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-gem"></i>
+                    <h4>Quality Selection</h4>
+                    <p>Every book in our collection is carefully chosen for its literary merit and reader appeal.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-leaf"></i>
+                    <h4>Sustainability</h4>
+                    <p>We're committed to eco-friendly practices and supporting sustainable publishing initiatives.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="achievements-section">
+            <h3>Our Achievements</h3>
+            <div class="achievements-stats">
+                <div class="achievement">
+                    <span class="achievement-number">10,000+</span>
+                    <span class="achievement-label">Books Sold</span>
+                </div>
+                <div class="achievement">
+                    <span class="achievement-number">2,500+</span>
+                    <span class="achievement-label">Happy Customers</span>
+                </div>
+                <div class="achievement">
+                    <span class="achievement-number">100+</span>
+                    <span class="achievement-label">Author Events</span>
+                </div>
+                <div class="achievement">
+                    <span class="achievement-number">5★</span>
+                    <span class="achievement-label">Average Rating</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h3>Join Our Community</h3>
+            <p>Become part of our growing family of readers and discover your next favorite book today.</p>
+            <div class="cta-actions">
+                <a href="collection.html" class="cta-button primary">Browse Our Collection</a>
+                <a href="contact.html" class="cta-button secondary">Get in Touch</a>
+            </div>
         </section>
     </main>
+
     <footer>
-        <p>&copy; 2023 Book Lovers. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="collection.html">Collection</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <p>Subscribe to get updates on new books and offers</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Book Shop. All rights reserved to SMUCT.</p>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

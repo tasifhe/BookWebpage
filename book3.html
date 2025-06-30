@@ -3,18 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>The Great Adventure - Book Details</title>
+  <title>Echoes of the Wild - Book Details</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <header>
-    <h1>Book Shop</h1>
-
-    <nav>
+    <div class="header-content">
+      <h1><a href="index.html">📚 Book Shop</a></h1>
+      <nav>
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
+        <a href="collection.html">Collection</a>
+        <a href="about.html">About Us</a>
         <a href="contact.html">Contact</a>
-    </nav>
+        <div class="header-actions">
+          <button class="theme-toggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <div class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+          </div>
+        </div>
+      </nav>
+    </div>
   </header>
 
   <main class="book-details">

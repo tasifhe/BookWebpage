@@ -10,13 +10,24 @@
 </head>
 <body>
   <header>
-    <h1>Our Book Collection</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="collection.html" class="active">Collection</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <div class="header-content">
+      <h1><a href="index.html">📚 Book Shop</a></h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="collection.html" class="active">Collection</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <div class="header-actions">
+          <button class="theme-toggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <div class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+          </div>
+        </div>
+      </nav>
+    </div>
   </header>
 
   <main>
@@ -302,7 +313,8 @@
     </div>
   </footer>
 
-  <!-- Simple JavaScript for Interaction -->
+  <!-- JavaScript for Interaction -->
+  <script src="script.js"></script>
   <script>
     // Quick view button functionality
     document.querySelectorAll('.quick-view').forEach(button => {

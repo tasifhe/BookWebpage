@@ -3,34 +3,242 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Book Shop</title>
+  <title>Book Shop | Discover Your Next Great Read</title>
+  <meta name="description" content="Explore our curated collection of books across various genres. Find your next great read at our online book shop.">
+  <meta name="keywords" content="books, online bookstore, fiction, non-fiction, reading, literature">
   <link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+  <div class="loader" id="loader">
+    <div class="loader-content">
+      <i class="fas fa-book-open"></i>
+      <p>Loading...</p>
+    </div>
+  </div>
+
   <header>
-    <h1>Welcome to the Book Shop</h1>
+    <div class="header-content">
+      <h1><a href="index.html">📚 Book Shop</a></h1>
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="collection.html">Collection</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <div class="header-actions">
+          <button class="theme-toggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <div class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+          </div>
+        </div>
+      </nav>
+    </div>
   </header>
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h2>Discover Your Next Great Read</h2>
+        <p>Explore a world of stories, knowledge, and imagination with our carefully curated collection of books.</p>
+        <div class="hero-actions">
+          <a href="collection.html" class="cta-button primary">Browse Collection</a>
+          <a href="#featured" class="cta-button secondary">See Featured Books</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <i class="fas fa-book-reader"></i>
+      </div>
+    </section>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+    <section class="quick-search">
+      <div class="search-container">
+        <h3>Find Your Perfect Book</h3>
+        <div class="search-box">
+          <input type="text" placeholder="Search books, authors, or genres..." aria-label="Search books">
+          <button type="button" aria-label="Search"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="quick-filters">
+          <button class="filter-btn" data-genre="fiction">Fiction</button>
+          <button class="filter-btn" data-genre="non-fiction">Non-Fiction</button>
+          <button class="filter-btn" data-genre="sci-fi">Sci-Fi</button>
+          <button class="filter-btn" data-genre="romance">Romance</button>
+        </div>
+      </div>
+    </section>
 
-  <section class="hero">
-    <h2>Discover Your Next Great Read</h2>
-    <p>Explore a world of stories, knowledge, and imagination.</p>
-    <a href="collection.html"><button>Browse Collection</button></a>
-  </section>
+    <section id="featured" class="featured-books">
+      <h2>Featured Books</h2>
+      <div class="books-grid">
+        <div class="book-card" data-book-id="book1">
+          <div class="book-cover">
+            <img src="images/TGA_CoverPage.png" alt="The Great Adventure" loading="lazy">
+            <div class="book-overlay">
+              <a href="book1.html" class="view-details">View Details</a>
+            </div>
+          </div>
+          <div class="book-info">
+            <h3>The Great Adventure</h3>
+            <p class="author">by John Doe</p>
+            <div class="rating">
+              <span class="stars">★★★★☆</span>
+              <span class="rating-text">(4.5/5)</span>
+            </div>
+            <p class="price">৳450</p>
+            <button class="add-to-cart-btn" onclick="addToCart('book1', 'The Great Adventure', '৳450', 'images/TGA_CoverPage.png')">
+              <i class="fas fa-cart-plus"></i> Add to Cart
+            </button>
+          </div>
+        </div>
 
-  <section class="about-us">
-    <h2>About Us</h2>
-    <p>Welcome to our Book Shop! We are passionate about bringing you a curated selection of books across various genres. Whether you're a casual reader or a book enthusiast, our collection is designed to inspire and captivate. Discover your next great read with us today!</p>
-  </section>
+        <div class="book-card" data-book-id="book2">
+          <div class="book-cover">
+            <img src="images/book2.jpg" alt="Journey Beyond" loading="lazy">
+            <div class="book-overlay">
+              <a href="book2.html" class="view-details">View Details</a>
+            </div>
+          </div>
+          <div class="book-info">
+            <h3>Journey Beyond</h3>
+            <p class="author">by Jane Smith</p>
+            <div class="rating">
+              <span class="stars">★★★★★</span>
+              <span class="rating-text">(4.8/5)</span>
+            </div>
+            <p class="price">৳520</p>
+            <button class="add-to-cart-btn" onclick="addToCart('book2', 'Journey Beyond', '৳520', 'images/book2.jpg')">
+              <i class="fas fa-cart-plus"></i> Add to Cart
+            </button>
+          </div>
+        </div>
 
+        <div class="book-card" data-book-id="book3">
+          <div class="book-cover">
+            <img src="images/book3.png" alt="Echoes of the Wild" loading="lazy">
+            <div class="book-overlay">
+              <a href="book3.html" class="view-details">View Details</a>
+            </div>
+          </div>
+          <div class="book-info">
+            <h3>Echoes of the Wild</h3>
+            <p class="author">by Mike Johnson</p>
+            <div class="rating">
+              <span class="stars">★★★★☆</span>
+              <span class="rating-text">(4.2/5)</span>
+            </div>
+            <p class="price">৳380</p>
+            <button class="add-to-cart-btn" onclick="addToCart('book3', 'Echoes of the Wild', '৳380', 'images/book3.png')">
+              <i class="fas fa-cart-plus"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="section-footer">
+        <a href="collection.html" class="view-all-btn">View All Books <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </section>
+
+    <section class="why-choose-us">
+      <h2>Why Choose Our Book Shop?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <i class="fas fa-shipping-fast"></i>
+          <h3>Fast Delivery</h3>
+          <p>Get your books delivered within 2-3 business days across the country.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Secure Payment</h3>
+          <p>Shop with confidence using our secure payment gateway.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-undo"></i>
+          <h3>Easy Returns</h3>
+          <p>Not satisfied? Return your books within 30 days for a full refund.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-headset"></i>
+          <h3>24/7 Support</h3>
+          <p>Our customer service team is here to help you anytime.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-us">
+      <div class="about-content">
+        <h2>About Our Book Shop</h2>
+        <p>Welcome to our Book Shop! We are passionate about bringing you a curated selection of books across various genres. Whether you're a casual reader or a book enthusiast, our collection is designed to inspire and captivate.</p>
+        <div class="stats">
+          <div class="stat">
+            <span class="stat-number">1000+</span>
+            <span class="stat-label">Books Available</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">500+</span>
+            <span class="stat-label">Happy Customers</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">50+</span>
+            <span class="stat-label">Genres Covered</span>
+          </div>
+        </div>
+        <a href="about.html" class="learn-more-btn">Learn More About Us</a>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <div class="newsletter-content">
+        <h2>Stay Updated</h2>
+        <p>Subscribe to our newsletter to get updates on new arrivals, special offers, and reading recommendations.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
   <footer>
-    <p>&copy; 2025 Book Shop. All rights reserved to SMUCT.</p>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="collection.html">Collection</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="collection.html#fiction">Fiction</a></li>
+          <li><a href="collection.html#non-fiction">Non-Fiction</a></li>
+          <li><a href="collection.html#sci-fi">Science Fiction</a></li>
+          <li><a href="collection.html#romance">Romance</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact Info</h4>
+        <p><i class="fas fa-map-marker-alt"></i> 123 Book Street, Reading City</p>
+        <p><i class="fas fa-phone"></i> +880-1234-567890</p>
+        <p><i class="fas fa-envelope"></i> info@bookshop.com</p>
+      </div>
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <div class="social-links">
+          <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Book Shop. All rights reserved to SMUCT.</p>
+    </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
